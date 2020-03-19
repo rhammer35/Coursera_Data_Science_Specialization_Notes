@@ -1,0 +1,33 @@
+---
+title: "Reproducible Research"
+author: "Ryan Hammer"
+date: "3/19/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+Welcome to a set of user created course notes for Regression Models, the 7th of 10 courses in the Johns Hopkins Data Specialization available through Coursera. This document is meant to serve as a study guide in conjunction with watching the instructional videos and attempting the optional Swirl exercises.
+For addional resources, visit the community forum on the course page on Coursera, as well as the link below:
+
+
+
+Without further ado, we begin.
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
