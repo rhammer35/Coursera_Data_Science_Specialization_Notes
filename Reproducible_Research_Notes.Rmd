@@ -6,6 +6,9 @@ output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
+library(tidyverse)
+library(knitr)
+library(ggplot2)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
