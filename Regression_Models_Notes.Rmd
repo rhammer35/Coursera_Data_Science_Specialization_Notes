@@ -9,6 +9,7 @@ output: pdf_document
 library(tidyverse)
 library(knitr)
 library(ggplot2)
+library(reshape2)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -33,10 +34,21 @@ It is important to begin by asking a simple question:
 Regression can be particularly useful for determining the relationship between two or more variables. Caffo phrases it specifically as "to try to find a parsimonious, easily described mean relationship" when going through example types of questions that can be answered using regression. In this description, parsimonious is being used to describe the results of a regression model as the simple and most straightforward relationship. He contrasts this with a far more complex machine learning model that might be slightly more accurate, but far less useful in the practice of discovering and describing relationships within the data.
 Regression also can be used to make inferences about a larger population based on results from a smaller data subset. Such inferences are highly useful in making decisions as well as finding new questions to ask about general populations (in that way one might say regression can create a neverending cycle, but that's not exactly useful, is it?). Lastly, regression is helpful in explaning the tendency of data to trend toward the mean (literally called "regression to the mean").
 
+## Example 1 - Galton's Data
 
+The first major example Caffo explores is height data for an analysis comparing parents and children done by John Galton. The following code loads the required packages for use the of the data set in R.
+```{r Galton data}
+library(UsingR)
+data(Galton)
+```
+When preparing to do regression on a set of data it is a good practice to do some exploratory work with data. Below are two histograms of height data for children and adults respectively.
 
 ```{r pressure, echo=FALSE}
-plot(pressure)
+long <- melt(galton)
+galt_hist <- ggplot(long, aes(x = value, fill = variable))
+galt_hist <- galt_hist + geom_histogram(color = "black", binwidth = 1)
+galt_hist <- galt_hist + facet_grid(. ~ variable)
+galt_hist
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+This data is going to be used to help introduce and explain the nuts and bolts of the least squares regression model.
