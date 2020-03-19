@@ -21,6 +21,29 @@ For addional resources, visit the community forum on the course page on Coursera
 
 Without further ado, we begin.
 
+## Reproducible Research Best Practices
+
+-Start from raw data and include it through a link or source file in the final output. Then include code for any cleaning of the data that is done, rather than just starting from pre-processed data.
+-Use version control to help keep track of changes being made
+-Use statistical software whose operation can be coded; this allows for creation of a set of instructions for how the data has been manipulated.
+-Save data in non-propietary formats.
+
+## Knitr
+
+Knitr is a form of literate statistical programming. Literate statistical programming solves the problem of combining data, code, and analysis into one document. It creates an article that is a stream of text and code, with each broken into chunks. The result is a document that is easy to read for humans in its output format, but also contains code that is machine readable and executable as well.
+This allows for more easily reproducible research because readers can view the code used to take the raw data and manipulate it for use in whatever analysis is being done; more simply put, it creates the pudding containing the proof. Any person lending a critical eye to a set of analysis can copy and paste the code and reproduce the results on the raw data (or not if the proverbial pudding is bad).
+---
+Knitr is an R package available on CRAN and comes integrated into R Studio. It supports R Markdown, LaTeX, or HTML and can export to PDF or HTML. It is extremely useful for creating manuals, technical documents, tutorials, reports, and/or data preprocessing documents and summaries.
+
+## Text Formatting in R Markdown
+
+To italicize text in R Markdown, use a single * at the beginning and end of the word or phrase for which italics are desired. For example, to italicize "Reproducible Research" would be as follows:
+```{r}
+
+```
+
+
+
 ```{r cars}
 summary(cars)
 ```
