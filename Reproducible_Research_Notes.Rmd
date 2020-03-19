@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Introduction
 
-Welcome to a set of user created course notes for Regression Models, the 7th of 10 courses in the Johns Hopkins Data Specialization available through Coursera. This document is meant to serve as a study guide in conjunction with watching the instructional videos and attempting the optional Swirl exercises.
+Welcome to a set of user created course notes for Reproducible Research, the 5th of 10 courses in the Johns Hopkins Data Specialization available through Coursera. This document is meant to serve as a study guide in conjunction with watching the instructional videos and attempting the optional Swirl exercises.
 For addional resources, visit the community forum on the course page on Coursera, as well as the link below:
 
 
