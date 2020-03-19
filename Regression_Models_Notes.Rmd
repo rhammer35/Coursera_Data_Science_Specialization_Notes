@@ -19,11 +19,21 @@ For addional resources, visit the community forum on the course page on Coursera
 
 
 
+Additionally, here are a set of resources that might aid in understanding statistical regression:
+
+
 Without further ado, we begin.
 
-## Including Plots
+## Why Regression?
 
-You can also embed plots, for example:
+It is important to begin by asking a simple question:
+
+*Why is regression a useful tool?*
+
+Regression can be particularly useful for determining the relationship between two or more variables. Caffo phrases it specifically as "to try to find a parsimonious, easily described mean relationship" when going through example types of questions that can be answered using regression. In this description, parsimonious is being used to describe the results of a regression model as the simple and most straightforward relationship. He contrasts this with a far more complex machine learning model that might be slightly more accurate, but far less useful in the practice of discovering and describing relationships within the data.
+Regression also can be used to make inferences about a larger population based on results from a smaller data subset. Such inferences are highly useful in making decisions as well as finding new questions to ask about general populations (in that way one might say regression can create a neverending cycle, but that's not exactly useful, is it?). Lastly, regression is helpful in explaning the tendency of data to trend toward the mean (literally called "regression to the mean").
+
+
 
 ```{r pressure, echo=FALSE}
 plot(pressure)
