@@ -6,18 +6,20 @@ output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
+library(tidyverse)
+library(knitr)
+library(ggplot2)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Introduction
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Welcome to a set of user created course notes for Regression Models, the 7th of 10 courses in the Johns Hopkins Data Specialization available through Coursera. This document is meant to serve as a study guide in conjunction with watching the instructional videos and attempting the optional Swirl exercises.
+For addional resources, visit the community forum on the course page on Coursera, as well as the link below:
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
-```
+
+Without further ado, we begin.
 
 ## Including Plots
 
