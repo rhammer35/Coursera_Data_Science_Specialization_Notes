@@ -52,3 +52,26 @@ galt_hist
 ```
 
 This data is going to be used to help introduce and explain the nuts and bolts of the least squares regression model.
+Begin by considering the children's heights only. If the goal is to choose the best method for predicting any random child's height, the natural starting place is the middle. It then becomes necessary to describe the middle. The middle is the value for mu that minimizes the sum of squared distances in the formula below:
+
+$\sum_{i=1}^{n} (Y_{i} - \mu)^{2}$
+
+The value of $\mu$ that achieves that is the mean of the data. This value is also equal to the physical center of mass of the histogram above. See the proof below:
+
+$\sum_{i=1}^{n} (Y_{i} - \mu)^{2} = \sum_{i=1}^{n} (Y_{i} - \overline{Y} + \overline{Y} - \mu)^{2}$  
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= $\sum_{i=1}^{n} (Y_{i} - \overline{Y})^{2} + 2\sum_{i=1}^{n} (Y_{i} - \overline{Y})(\overline{Y} - \mu) + \sum_{i=1}^{n} (\overline{Y} - \mu)^{2}$  
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= $\sum_{i=1}^{n} (Y_{i} - \overline{Y})^{2} + 2(\overline{Y} - \mu)\sum_{i=1}^{n} (Y_{i} - \overline{Y}) + \sum_{i=1}^{n} (\overline{Y} - \mu)^{2}$  
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= $\sum_{i=1}^{n} (Y_{i} - \overline{Y})^{2} + 2(\overline{Y} - \mu)(\sum_{i=1}^{n} Y_{i} - n\overline{Y}) + \sum_{i=1}^{n} (\overline{Y} - \mu)^{2}$  
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= $\sum_{i=1}^{n} (Y_{i} - \overline{Y})^{2} + \sum_{i=1}^{n} (\overline{Y} - \mu)^{2}$  
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$\underline{>} \sum_{i=1}^{n} (Y_{i} - \overline{Y})^{2}$  
+  
